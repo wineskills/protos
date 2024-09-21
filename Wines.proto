@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package wineskills_rpc;
+
+service Wines {
+    rpc GetWines(GetWinesRequest) returns (GetWinesResponse) {
+
+    }
+}
+
+message GetWinesRequest {
+}
+
+message GetWinesResponse {
+    repeated Wine wines = 1;
+}
+
+message Wine {
+    string name = 1;
+    string kind = 2;
+    string body = 3;
+    string acidity = 4;
+    string elaborate = 5;
+    string alcohol_by_volume = 6;
+    string country = 7;
+    string region = 8;
+    string winery = 9;
+}
